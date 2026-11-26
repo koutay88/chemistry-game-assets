@@ -3,10 +3,10 @@
   "materials": {
     "S": "materials/natural-sulfur/v001.webp",
     "Cu": "materials/copper/v001.webp",
-    "sample-master-012": "materials/amethyst/v001.webp"
+    "sample-master-012": "materials/amethyst/v002.png"
   },
   "missionMaterials": {
-    "copperOre": "mission-materials/copper-ore/v001.webp",
+    "copperOre": "mission-materials/copper-ore/v002.png",
     "sulfurCrystal": "mission-materials/sulfur/v001.webp"
   },
   "experiments": {
