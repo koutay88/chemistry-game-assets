@@ -1,0 +1,44 @@
+name: Validate development illustrations
+on:
+  push:
+    branches: [development]
+    paths: ['manifest.json', 'materials/**', 'mission-materials/**', 'experiments/**', '.github/workflows/validate-development.yml']
+  pull_request:
+    branches: [development]
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Validate manifest and image files
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          root = Path('.').resolve()
+          manifest = json.loads((root / 'manifest.json').read_text(encoding='utf-8'))
+          if manifest.get('schemaVersion') != 1:
+              raise SystemExit('Unsupported manifest schema')
+          groups = {'materials': 'materials', 'missionMaterials': 'mission-materials', 'experiments': 'experiments'}
+          total = 0
+          for field, directory in groups.items():
+              entries = manifest.get(field, {})
+              if not isinstance(entries, dict):
+                  raise SystemExit(f'{field} must be an object')
+              for key, rel in entries.items():
+                  if not isinstance(rel, str) or Path(rel).is_absolute():
+                      raise SystemExit(f'Bad path: {field}.{key}')
+                  path = (root / rel).resolve()
+                  if not path.is_relative_to(root / directory) or not path.is_file() or path.stat().st_size == 0:
+                      raise SystemExit(f'Missing asset: {field}.{key} -> {rel}')
+                  if path.suffix.lower() not in {'.png', '.webp'}:
+                      raise SystemExit(f'Unsupported format: {rel}')
+                  total += 1
+          if total == 0:
+              raise SystemExit('No asset mappings found')
+          print(f'Validated {total} mappings')
+          PY
