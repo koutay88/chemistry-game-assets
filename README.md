@@ -1,17 +1,20 @@
-# chemistry-game-assets
+# World Chemistry Collection assets
 
-Public image repository for **collection specimen illustrations** used by World Chemistry Collection. Experiment illustrations are kept out until explicitly approved.
+This repository stores replaceable illustration files for the game. The game mechanics and save data are not stored here.
 
-## Register an image
+## Branches
 
-1. Add an optimized PNG or WebP under `materials/<slug>/v001.webp`.
-2. Update `manifest.json` with the game's material ID as the key and that relative path as the value.
-3. Keep file names lowercase ASCII with hyphens. The manifest supports only `materials/<slug>/v<number>.(webp|png)`.
-4. Commit the file and manifest to `main`.
+- `main`: public/released asset manifest. Changes here can affect the public game; update only when the owner explicitly asks for a public release.
+- `development`: development-only asset manifest used by the private development game.
 
-The development game reads the public manifest from this repository when opened. The development deployment is private; only this repository's images and manifest are public.
+## Registering images
 
-## Current mapping
+Use the `development` branch for routine illustration additions and replacements. Add an optimized WebP/PNG under one of:
 
-- `S` — natural sulfur specimen, `materials/natural-sulfur/v001.webp`
-- `Cu` — copper collection entry, illustrated with the malachite ore sample, `materials/malachite/v001.webp`
+- `materials/<slug>/v001.webp`
+- `mission-materials/<slug>/v001.webp`
+- `experiments/<category>/<name>-v001.webp`
+
+Then add or update a stable ID/key in the matching `materials`, `missionMaterials`, or `experiments` map in that branch's `manifest.json`. Keep the public `main` branch unchanged unless the owner explicitly requests a public update.
+
+See the private Google Drive folder `世界化学コレクション素材/05_素材管理` for the Chat-mode procedure and full ID mapping.
