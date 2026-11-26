@@ -2,7 +2,8 @@
   "schemaVersion": 1,
   "materials": {
     "S": "materials/natural-sulfur/v001.webp",
-    "Cu": "materials/copper/v001.webp"
+    "Cu": "materials/copper/v001.webp",
+    "sample-master-012": "materials/amethyst/v001.webp"
   },
   "missionMaterials": {
     "copperOre": "mission-materials/copper-ore/v001.webp",
