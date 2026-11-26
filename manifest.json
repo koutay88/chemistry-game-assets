@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
   "materials": {
-    "test-natural-sulfur": "materials/test-natural-sulfur/v001.webp"
+    "S": "materials/natural-sulfur/v001.webp"
   }
 }
