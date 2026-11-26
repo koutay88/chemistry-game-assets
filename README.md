@@ -1,17 +1,38 @@
-# chemistry-game-assets
+# World Chemistry Collection assets
 
-Public image repository for **collection specimen illustrations** used by World Chemistry Collection. Experiment illustrations are kept out until explicitly approved.
+This repository stores replaceable illustration files. The game mechanics and save data are not stored here.
 
-## Register an image
+## Branches
 
-1. Add an optimized PNG or WebP under `materials/<slug>/v001.webp`.
-2. Update `manifest.json` with the game's material ID as the key and that relative path as the value.
-3. Keep file names lowercase ASCII with hyphens. The manifest supports only `materials/<slug>/v<number>.(webp|png)`.
-4. Commit the file and manifest to `main`.
+- `main`: public/released asset manifest. Only updated when the owner explicitly asks to update the public game.
+- `development`: development-only manifest and art. The private development game reads this branch.
 
-The development game reads the public manifest from this repository when opened. The development deployment is private; only this repository's images and manifest are public.
+## Manifest schema
 
-## Current mapping
+`manifest.json` supports:
+- `materials`: element/material ID to specimen illustration (for example `Cu`, `S`)
+- `missionMaterials`: mission-only specimen names (for example `copperOre`, `sulfurCrystal`)
+- `experiments`: illustration keys used in mission scenes
 
-- `S` — natural sulfur specimen, `materials/natural-sulfur/v001.webp`
-- `Cu` — copper collection entry, illustrated with the malachite ore sample, `materials/malachite/v001.webp`
+Store optimized WebP/PNG under the corresponding `materials/`, `mission-materials/`, or `experiments/` path. Keep IDs and existing save data unchanged. Use a new version suffix for replacements; update only the development manifest until public release is explicitly requested.
+
+## Development workflow
+
+1. Add WebP image files in the matching directory on `development`.
+2. Update `manifest.json` on `development` with the stable illustration key and relative path.
+3. Confirm the private development game loads the image.
+4. Never merge `development` into `main` or edit the public manifest unless the owner explicitly instructs it.
+
+## Current development mappings
+
+| Kind | ID/key | Path | Illustration |
+|---|---|---|---|
+| Material | S | materials/natural-sulfur/v001.webp | Natural sulfur (existing) |
+| Material | Cu | materials/copper/v001.webp | Extracted copper |
+| Mission material | copperOre | mission-materials/copper-ore/v001.webp | Malachite ore |
+| Mission material | sulfurCrystal | mission-materials/sulfur/v001.webp | Sulfur crystals |
+| Experiment | copperPowder | experiments/copper/powder-v001.webp | Ground malachite |
+| Experiment | copperOxide | experiments/copper/oxide-v001.webp | Heated ore / black oxide |
+| Experiment | copperExtraction | experiments/copper/extraction-v001.webp | Copper extraction |
+| Experiment | saltWaterElectrolysis | experiments/chlorine/salt-water-electrolysis-v001.webp | Brine electrolysis |
+| Experiment | sulfurCrystalAnalysis | experiments/sulfur/crystal-analysis-v001.webp | Sulfur lab illustration |

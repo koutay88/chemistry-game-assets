@@ -2,6 +2,17 @@
   "schemaVersion": 1,
   "materials": {
     "S": "materials/natural-sulfur/v001.webp",
-    "Cu": "materials/malachite/v001.webp"
+    "Cu": "materials/copper/v001.webp"
+  },
+  "missionMaterials": {
+    "copperOre": "mission-materials/copper-ore/v001.webp",
+    "sulfurCrystal": "mission-materials/sulfur/v001.webp"
+  },
+  "experiments": {
+    "copperPowder": "experiments/copper/powder-v001.webp",
+    "copperOxide": "experiments/copper/oxide-v001.webp",
+    "copperExtraction": "experiments/copper/extraction-v001.webp",
+    "saltWaterElectrolysis": "experiments/chlorine/salt-water-electrolysis-v001.webp",
+    "sulfurCrystalAnalysis": "experiments/sulfur/crystal-analysis-v001.webp"
   }
 }
