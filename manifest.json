@@ -1,6 +1,7 @@
 {
   "schemaVersion": 1,
   "materials": {
-    "S": "materials/natural-sulfur/v001.webp"
+    "S": "materials/natural-sulfur/v001.webp",
+    "Cu": "materials/malachite/v001.webp"
   }
 }
