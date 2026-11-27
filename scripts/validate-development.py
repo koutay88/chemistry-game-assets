@@ -87,8 +87,12 @@ for i in (2, 3):
     condition = promotions[f"chapter{i}"]
     if not isinstance(condition, dict) or set(condition) != {"requiredLevel", "requiredElements"} or not is_int(condition.get("requiredLevel"), 1, 30) or not is_int(condition.get("requiredElements"), 1, 118):
         fail(f"Invalid home promotion condition for chapter{i}")
-    if condition["requiredElements"] < clear_counts[i-2]:
-        fail(f"Chapter{i} father conversation cannot precede the previous chapter clear")
+    previous_cumulative = sum(counts[n] for n in range(1, i))
+    if condition["requiredElements"] > previous_cumulative:
+        fail(f"Chapter{i} father conversation requires elements that are still locked")
+    reachable_level = max(row["level"] for row in levels if row["requiredFound"] <= previous_cumulative)
+    if condition["requiredLevel"] > reachable_level:
+        fail(f"Chapter{i} father conversation level would block all remaining routes")
 convenience_keys = {"home", "withinRoll", "tripleAction", "stay", "periodicSupport", "virtualOrder", "researchQueue"}
 convenience = progression.get("convenienceUnlocks")
 if not isinstance(convenience, dict) or set(convenience) != convenience_keys or any(not is_int(value, 1, 30) for value in convenience.values()):
