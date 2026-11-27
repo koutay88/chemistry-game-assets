@@ -4,6 +4,7 @@ import json
 import re
 import sys
 from pathlib import Path
+from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -291,6 +292,15 @@ for field,directory in asset_fields.items():
             header=stream.read(12)
         if image.suffix.lower()==".png" and not header.startswith(bytes.fromhex("89504e470d0a1a0a")): fail(f"Invalid PNG: {rel}")
         if image.suffix.lower()==".webp" and not (header[:4]==b"RIFF" and header[8:12]==b"WEBP"): fail(f"Invalid WebP: {rel}")
+        try:
+            with Image.open(image) as decoded:
+                if decoded.format != image.suffix[1:].upper(): fail(f"Image format mismatch: {rel}")
+                if not (1 <= decoded.width <= 8192 and 1 <= decoded.height <= 8192): fail(f"Invalid image dimensions: {rel}")
+                decoded.verify()
+            with Image.open(image) as decoded:
+                decoded.load()
+        except Exception as exc:
+            fail(f"Image decode failed: {rel}: {exc}")
         total+=1
 if total == 0: fail("No image mappings found")
 print(f"Validated 118 elements, 30 levels, 3 chapters, {total} image mappings, and runtime override consistency")
