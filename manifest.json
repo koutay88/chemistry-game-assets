@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "materials": {
     "S": "materials/natural-sulfur/v001.webp",
-    "Cu": "materials/malachite/v001.webp",
+    "Cu": "materials/copper/v001.webp",
     "sample-master-012": "materials/amethyst/v002.png",
     "sample-master-003": "materials/salt-water/v001.webp",
     "sample-master-004": "materials/rock-salt/v001.webp",

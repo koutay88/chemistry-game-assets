@@ -1,25 +1,13 @@
 {
   "schemaVersion": 1,
   "gameId": "world-chem-collection",
-  "revision": 1,
-  "ui": {
-    "rules": [
-      {
-        "selector": ".dock button",
-        "styles": {
-          "min-width": "92px"
-        }
-      }
-    ],
-    "text": {}
-  },
+  "revision": 0,
+  "ui": {"rules": [], "text": {}},
   "balance": {},
   "facilities": {},
   "materials": {},
   "routes": {},
   "reactions": {},
   "study": {},
-  "story": {
-    "chapterOneClear": []
-  }
+  "story": {"chapterOneClear": []}
 }
