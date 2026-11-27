@@ -60,40 +60,6 @@ for i, row in enumerate(levels, 1):
         fail(f"Level {i} requires more discoveries than its unlock cap")
 if levels[0]["requiredFound"] != 0 or levels[-1]["unlockCap"] != 118:
     fail("Level 1 must start at zero and level 30 must unlock all 118 elements")
-chapters = master.get("chapters")
-expected_ranges = {i: chapter_ranges[i-1] for i in range(1, 4)}
-if not isinstance(chapters, list) or len(chapters) != 3:
-    fail("chapter-master must define three chapters")
-for i, chapter in enumerate(chapters, 1):
-    if chapter.get("chapter") != i or chapter.get("levelRange") != expected_ranges[i]:
-        fail(f"Chapter {i} has an unexpected level range")
-counts = {i: 0 for i in range(1, 4)}
-for row in master["elements"]:
-    chapter, level, symbol = row.get("chapter"), row.get("level"), row.get("symbol")
-    if chapter not in counts or not is_int(level, 1, 30):
-        fail(f"Invalid chapter or level for element {symbol}")
-    low, high = expected_ranges[chapter]
-    if not low <= level <= high:
-        fail(f"Element {symbol} is assigned outside its chapter level range")
-    z = index["elementAtomicNumbers"].get(symbol)
-    if not is_int(z, 1, 118):
-        fail(f"Element {symbol} is missing from the game index")
-    facility = row.get("collectionFacility")
-    if facility not in index["facilityIds"] or not all(isinstance(row.get(k), str) and row[k] for k in ("rawMaterial", "researchClass")):
-        fail(f"Element {symbol} has incomplete collection/research data")
-    counts[chapter] += 1
-if counts != {1: 58, 2: 30, 3: 30}:
-    fail(f"Chapter element totals are not 58/30/30: {counts}")
-cumulative_counts = {1: counts[1], 2: counts[1] + counts[2], 3: sum(counts.values())}
-for i in range(1, 4):
-    if clear_counts[i-1] > cumulative_counts[i]:
-        fail(f"Chapter {i} requires more elements than exist before its clear")
-for i, chapter in enumerate(chapters, 1):
-    if chapter.get("cumulativeElements") != sum(counts[n] for n in range(1, i+1)):
-        fail(f"Chapter {i} cumulative element count is inconsistent")
-
-if config.get("schemaVersion") != 1 or config.get("gameId") != "world-chem-collection" or not is_int(config.get("revision"), 0, 2**31-1):
-    fail("Unsupported game-config schema, gameId, or revision")
 progression = config.get("progression")
 if not isinstance(progression, dict):
     fail("progression settings are required")
@@ -130,6 +96,41 @@ if not isinstance(convenience, dict) or set(convenience) != convenience_keys or 
 ending = progression.get("ending")
 if not isinstance(ending, dict) or set(ending) != {"requiredElements", "requiresHomeVisit"} or not is_int(ending.get("requiredElements"), 1, 118) or not isinstance(ending.get("requiresHomeVisit"), bool):
     fail("Invalid ending conditions")
+chapters = master.get("chapters")
+expected_ranges = {i: chapter_ranges[i-1] for i in range(1, 4)}
+if not isinstance(chapters, list) or len(chapters) != 3:
+    fail("chapter-master must define three chapters")
+for i, chapter in enumerate(chapters, 1):
+    if chapter.get("chapter") != i or chapter.get("levelRange") != expected_ranges[i]:
+        fail(f"Chapter {i} has an unexpected level range")
+counts = {i: 0 for i in range(1, 4)}
+for row in master["elements"]:
+    chapter, level, symbol = row.get("chapter"), row.get("level"), row.get("symbol")
+    if chapter not in counts or not is_int(level, 1, 30):
+        fail(f"Invalid chapter or level for element {symbol}")
+    low, high = expected_ranges[chapter]
+    if not low <= level <= high:
+        fail(f"Element {symbol} is assigned outside its chapter level range")
+    z = index["elementAtomicNumbers"].get(symbol)
+    if not is_int(z, 1, 118):
+        fail(f"Element {symbol} is missing from the game index")
+    facility = row.get("collectionFacility")
+    if facility not in index["facilityIds"] or not all(isinstance(row.get(k), str) and row[k] for k in ("rawMaterial", "researchClass")):
+        fail(f"Element {symbol} has incomplete collection/research data")
+    counts[chapter] += 1
+if counts != {1: 58, 2: 30, 3: 30}:
+    fail(f"Chapter element totals are not 58/30/30: {counts}")
+cumulative_counts = {1: counts[1], 2: counts[1] + counts[2], 3: sum(counts.values())}
+for i in range(1, 4):
+    if clear_counts[i-1] > cumulative_counts[i]:
+        fail(f"Chapter {i} requires more elements than exist before its clear")
+for i, chapter in enumerate(chapters, 1):
+    if chapter.get("cumulativeElements") != sum(counts[n] for n in range(1, i+1)):
+        fail(f"Chapter {i} cumulative element count is inconsistent")
+
+if config.get("schemaVersion") != 1 or config.get("gameId") != "world-chem-collection" or not is_int(config.get("revision"), 0, 2**31-1):
+    fail("Unsupported game-config schema, gameId, or revision")
+
 index_materials = set(index["materialIds"])
 index_routes = set(index["routeIds"])
 index_reactions = set(index["reactionIds"])
