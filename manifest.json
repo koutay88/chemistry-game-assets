@@ -8,7 +8,8 @@
     "sample-master-004": "materials/rock-salt/v001.webp",
     "sample-master-006": "materials/nigari/v001.webp",
     "sample-master-007": "materials/concentrated-brine/v001.webp",
-    "sample-master-008": "materials/native-gold/v001.webp"
+    "sample-master-008": "materials/native-gold/v001.webp",
+    "sample-master-013": "materials/bauxite/v001.webp"
   },
   "missionMaterials": {
     "copperOre": "mission-materials/copper-ore/v002.png",
