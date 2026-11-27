@@ -22,6 +22,8 @@
     "saltWaterElectrolysis": "experiments/chlorine/salt-water-electrolysis-v001.webp",
     "sulfurCrystalAnalysis": "experiments/sulfur/crystal-analysis-v001.webp",
     "recrystallizationStep01": "experiments/recrystallization/step-01-v001.png",
-    "recrystallizationStep02": "experiments/recrystallization/step-02-v001.png"
+    "recrystallizationStep02": "experiments/recrystallization/step-02-v001.png",
+    "ironReductionStep01": "experiments/iron-reduction/step-01-v001.webp",
+    "ironReductionStep02": "experiments/iron-reduction/step-02-v001.webp"
   }
 }
