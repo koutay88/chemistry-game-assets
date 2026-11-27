@@ -1,44 +1,72 @@
-name: Validate development illustrations
+name: Validate and publish development data
 on:
   push:
     branches: [development]
-    paths: ['manifest.json', 'materials/**', 'mission-materials/**', 'experiments/**', '.github/workflows/validate-development.yml']
+    paths:
+      - 'manifest.json'
+      - 'game-config.json'
+      - 'chapter-master.json'
+      - 'game-index.json'
+      - 'materials/**'
+      - 'mission-materials/**'
+      - 'experiments/**'
+      - 'scripts/validate-development.py'
+      - '.github/workflows/validate-development.yml'
   pull_request:
     branches: [development]
+    paths:
+      - 'manifest.json'
+      - 'game-config.json'
+      - 'chapter-master.json'
+      - 'game-index.json'
+      - 'materials/**'
+      - 'mission-materials/**'
+      - 'experiments/**'
+      - 'scripts/validate-development.py'
+      - '.github/workflows/validate-development.yml'
+  workflow_dispatch:
 permissions:
-  contents: read
+  contents: write
+concurrency:
+  group: chemistry-assets-development-promotion
+  cancel-in-progress: false
 jobs:
   validate:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Check out candidate snapshot
+        uses: actions/checkout@v4
         with:
-          persist-credentials: false
-      - name: Validate manifest and image files
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
+      - name: Validate config, progression, and image references
+        run: python3 scripts/validate-development.py
+      - name: Promote only the validated snapshot
+        if: github.event_name == 'push' && github.ref == 'refs/heads/development'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          CANDIDATE_SHA: ${{ github.sha }}
         run: |
-          python3 - <<'PY'
-          import json
-          from pathlib import Path
-          root = Path('.').resolve()
-          manifest = json.loads((root / 'manifest.json').read_text(encoding='utf-8'))
-          if manifest.get('schemaVersion') != 1:
-              raise SystemExit('Unsupported manifest schema')
-          groups = {'materials': 'materials', 'missionMaterials': 'mission-materials', 'experiments': 'experiments'}
-          total = 0
-          for field, directory in groups.items():
-              entries = manifest.get(field, {})
-              if not isinstance(entries, dict):
-                  raise SystemExit(f'{field} must be an object')
-              for key, rel in entries.items():
-                  if not isinstance(rel, str) or Path(rel).is_absolute():
-                      raise SystemExit(f'Bad path: {field}.{key}')
-                  path = (root / rel).resolve()
-                  if not path.is_relative_to(root / directory) or not path.is_file() or path.stat().st_size == 0:
-                      raise SystemExit(f'Missing asset: {field}.{key} -> {rel}')
-                  if path.suffix.lower() not in {'.png', '.webp'}:
-                      raise SystemExit(f'Unsupported format: {rel}')
-                  total += 1
-          if total == 0:
-              raise SystemExit('No asset mappings found')
-          print(f'Validated {total} mappings')
-          PY
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git fetch origin development
+          if git fetch origin verified-development; then
+            previous="$(git rev-parse FETCH_HEAD)"
+            git checkout --detach "$CANDIDATE_SHA"
+            if git cat-file -e "$previous:release.json" 2>/dev/null; then
+              git show "$previous:release.json" > release.json
+              git add release.json
+            fi
+            tree="$(git write-tree)"
+            data_commit="$(printf 'Verified development data %s\n' "$CANDIDATE_SHA" | git commit-tree "$tree" -p "$previous")"
+          else
+            git checkout --detach "$CANDIDATE_SHA"
+            tree="$(git rev-parse "$CANDIDATE_SHA^{tree}")"
+            data_commit="$(printf 'Verified development data %s\n' "$CANDIDATE_SHA" | git commit-tree "$tree" -p "$CANDIDATE_SHA")"
+          fi
+          git push origin "$data_commit:refs/heads/verified-development"
+          git checkout --detach "$data_commit"
+          printf '{"schemaVersion":1,"gameId":"world-chem-collection","ref":"%s","candidate":"%s"}\n' "$data_commit" "$CANDIDATE_SHA" > release.json
+          git add release.json
+          git commit -m "Point verified development to $CANDIDATE_SHA"
+          git push origin HEAD:refs/heads/verified-development

@@ -1,0 +1,1131 @@
+{
+  "version": 1,
+  "source": "世界化学コレクション_3章構成改修仕様書_20261126",
+  "chapters": [
+    {
+      "chapter": 1,
+      "levelRange": [
+        1,
+        15
+      ],
+      "discoveryYears": "〜1859",
+      "cumulativeElements": 58
+    },
+    {
+      "chapter": 2,
+      "levelRange": [
+        16,
+        23
+      ],
+      "discoveryYears": "1860〜1936",
+      "cumulativeElements": 88
+    },
+    {
+      "chapter": 3,
+      "levelRange": [
+        24,
+        30
+      ],
+      "discoveryYears": "1937〜",
+      "cumulativeElements": 118
+    }
+  ],
+  "levels": [
+    {
+      "level": 1,
+      "requiredFound": 0,
+      "unlockCap": 4
+    },
+    {
+      "level": 2,
+      "requiredFound": 4,
+      "unlockCap": 8
+    },
+    {
+      "level": 3,
+      "requiredFound": 6,
+      "unlockCap": 12
+    },
+    {
+      "level": 4,
+      "requiredFound": 10,
+      "unlockCap": 16
+    },
+    {
+      "level": 5,
+      "requiredFound": 13,
+      "unlockCap": 20
+    },
+    {
+      "level": 6,
+      "requiredFound": 16,
+      "unlockCap": 24
+    },
+    {
+      "level": 7,
+      "requiredFound": 19,
+      "unlockCap": 28
+    },
+    {
+      "level": 8,
+      "requiredFound": 22,
+      "unlockCap": 32
+    },
+    {
+      "level": 9,
+      "requiredFound": 26,
+      "unlockCap": 36
+    },
+    {
+      "level": 10,
+      "requiredFound": 29,
+      "unlockCap": 40
+    },
+    {
+      "level": 11,
+      "requiredFound": 32,
+      "unlockCap": 44
+    },
+    {
+      "level": 12,
+      "requiredFound": 35,
+      "unlockCap": 48
+    },
+    {
+      "level": 13,
+      "requiredFound": 38,
+      "unlockCap": 52
+    },
+    {
+      "level": 14,
+      "requiredFound": 42,
+      "unlockCap": 55
+    },
+    {
+      "level": 15,
+      "requiredFound": 44,
+      "unlockCap": 58
+    },
+    {
+      "level": 16,
+      "requiredFound": 58,
+      "unlockCap": 62
+    },
+    {
+      "level": 17,
+      "requiredFound": 60,
+      "unlockCap": 66
+    },
+    {
+      "level": 18,
+      "requiredFound": 62,
+      "unlockCap": 70
+    },
+    {
+      "level": 19,
+      "requiredFound": 65,
+      "unlockCap": 74
+    },
+    {
+      "level": 20,
+      "requiredFound": 68,
+      "unlockCap": 78
+    },
+    {
+      "level": 21,
+      "requiredFound": 72,
+      "unlockCap": 82
+    },
+    {
+      "level": 22,
+      "requiredFound": 76,
+      "unlockCap": 85
+    },
+    {
+      "level": 23,
+      "requiredFound": 80,
+      "unlockCap": 88
+    },
+    {
+      "level": 24,
+      "requiredFound": 88,
+      "unlockCap": 92
+    },
+    {
+      "level": 25,
+      "requiredFound": 91,
+      "unlockCap": 96
+    },
+    {
+      "level": 26,
+      "requiredFound": 94,
+      "unlockCap": 100
+    },
+    {
+      "level": 27,
+      "requiredFound": 97,
+      "unlockCap": 104
+    },
+    {
+      "level": 28,
+      "requiredFound": 100,
+      "unlockCap": 108
+    },
+    {
+      "level": 29,
+      "requiredFound": 104,
+      "unlockCap": 113
+    },
+    {
+      "level": 30,
+      "requiredFound": 109,
+      "unlockCap": 118
+    }
+  ],
+  "elements": [
+    {
+      "symbol": "Cu",
+      "rawMaterial": "マラカイト",
+      "collectionFacility": "金属",
+      "researchClass": "還元",
+      "level": 1,
+      "chapter": 1
+    },
+    {
+      "symbol": "S",
+      "rawMaterial": "自然硫黄",
+      "collectionFacility": "火山",
+      "researchClass": "精製",
+      "level": 1,
+      "chapter": 1
+    },
+    {
+      "symbol": "H",
+      "rawMaterial": "塩水",
+      "collectionFacility": "塩湖",
+      "researchClass": "電解",
+      "level": 1,
+      "chapter": 1
+    },
+    {
+      "symbol": "Cl",
+      "rawMaterial": "塩水",
+      "collectionFacility": "塩湖",
+      "researchClass": "電解",
+      "level": 1,
+      "chapter": 1
+    },
+    {
+      "symbol": "Na",
+      "rawMaterial": "岩塩",
+      "collectionFacility": "塩湖",
+      "researchClass": "溶融塩電解",
+      "level": 2,
+      "chapter": 1
+    },
+    {
+      "symbol": "Fe",
+      "rawMaterial": "磁鉄鉱",
+      "collectionFacility": "火山",
+      "researchClass": "還元",
+      "level": 2,
+      "chapter": 1
+    },
+    {
+      "symbol": "Mg",
+      "rawMaterial": "にがり",
+      "collectionFacility": "塩湖",
+      "researchClass": "電解",
+      "level": 2,
+      "chapter": 1
+    },
+    {
+      "symbol": "Br",
+      "rawMaterial": "濃縮塩水",
+      "collectionFacility": "塩湖",
+      "researchClass": "分離",
+      "level": 2,
+      "chapter": 1
+    },
+    {
+      "symbol": "Au",
+      "rawMaterial": "自然金",
+      "collectionFacility": "金属",
+      "researchClass": "精製",
+      "level": 3,
+      "chapter": 1
+    },
+    {
+      "symbol": "Ag",
+      "rawMaterial": "輝銀鉱",
+      "collectionFacility": "金属",
+      "researchClass": "精製",
+      "level": 3,
+      "chapter": 1
+    },
+    {
+      "symbol": "Sn",
+      "rawMaterial": "錫石",
+      "collectionFacility": "金属",
+      "researchClass": "還元",
+      "level": 3,
+      "chapter": 1
+    },
+    {
+      "symbol": "Pb",
+      "rawMaterial": "方鉛鉱",
+      "collectionFacility": "金属",
+      "researchClass": "製錬",
+      "level": 3,
+      "chapter": 1
+    },
+    {
+      "symbol": "Si",
+      "rawMaterial": "石英",
+      "collectionFacility": "火山",
+      "researchClass": "還元",
+      "level": 4,
+      "chapter": 1
+    },
+    {
+      "symbol": "Al",
+      "rawMaterial": "ボーキサイト",
+      "collectionFacility": "火山",
+      "researchClass": "電解",
+      "level": 4,
+      "chapter": 1
+    },
+    {
+      "symbol": "Hg",
+      "rawMaterial": "辰砂",
+      "collectionFacility": "火山",
+      "researchClass": "製錬",
+      "level": 4,
+      "chapter": 1
+    },
+    {
+      "symbol": "As",
+      "rawMaterial": "硫砒鉄鉱",
+      "collectionFacility": "火山",
+      "researchClass": "分離",
+      "level": 4,
+      "chapter": 1
+    },
+    {
+      "symbol": "Mn",
+      "rawMaterial": "軟マンガン鉱",
+      "collectionFacility": "金属",
+      "researchClass": "還元",
+      "level": 5,
+      "chapter": 1
+    },
+    {
+      "symbol": "Zn",
+      "rawMaterial": "閃亜鉛鉱",
+      "collectionFacility": "金属",
+      "researchClass": "製錬",
+      "level": 5,
+      "chapter": 1
+    },
+    {
+      "symbol": "Ca",
+      "rawMaterial": "石膏",
+      "collectionFacility": "塩湖",
+      "researchClass": "電解",
+      "level": 5,
+      "chapter": 1
+    },
+    {
+      "symbol": "B",
+      "rawMaterial": "ホウ砂",
+      "collectionFacility": "塩湖",
+      "researchClass": "還元",
+      "level": 5,
+      "chapter": 1
+    },
+    {
+      "symbol": "C",
+      "rawMaterial": "木材",
+      "collectionFacility": "森林",
+      "researchClass": "炭化",
+      "level": 6,
+      "chapter": 1
+    },
+    {
+      "symbol": "N",
+      "rawMaterial": "空気",
+      "collectionFacility": "森林",
+      "researchClass": "分離",
+      "level": 6,
+      "chapter": 1
+    },
+    {
+      "symbol": "O",
+      "rawMaterial": "空気",
+      "collectionFacility": "森林",
+      "researchClass": "分離",
+      "level": 6,
+      "chapter": 1
+    },
+    {
+      "symbol": "P",
+      "rawMaterial": "骨灰",
+      "collectionFacility": "森林",
+      "researchClass": "還元",
+      "level": 6,
+      "chapter": 1
+    },
+    {
+      "symbol": "K",
+      "rawMaterial": "木灰",
+      "collectionFacility": "森林",
+      "researchClass": "還元",
+      "level": 7,
+      "chapter": 1
+    },
+    {
+      "symbol": "I",
+      "rawMaterial": "海藻",
+      "collectionFacility": "森林",
+      "researchClass": "分離",
+      "level": 7,
+      "chapter": 1
+    },
+    {
+      "symbol": "Li",
+      "rawMaterial": "含有塩水",
+      "collectionFacility": "塩湖",
+      "researchClass": "電解",
+      "level": 7,
+      "chapter": 1
+    },
+    {
+      "symbol": "Sr",
+      "rawMaterial": "天青石",
+      "collectionFacility": "塩湖",
+      "researchClass": "還元",
+      "level": 7,
+      "chapter": 1
+    },
+    {
+      "symbol": "Co",
+      "rawMaterial": "輝コバルト鉱",
+      "collectionFacility": "金属",
+      "researchClass": "製錬",
+      "level": 8,
+      "chapter": 1
+    },
+    {
+      "symbol": "Ni",
+      "rawMaterial": "ペントランド鉱",
+      "collectionFacility": "金属",
+      "researchClass": "製錬",
+      "level": 8,
+      "chapter": 1
+    },
+    {
+      "symbol": "Sb",
+      "rawMaterial": "輝安鉱",
+      "collectionFacility": "火山",
+      "researchClass": "還元",
+      "level": 8,
+      "chapter": 1
+    },
+    {
+      "symbol": "Se",
+      "rawMaterial": "含有硫黄鉱床",
+      "collectionFacility": "火山",
+      "researchClass": "分離",
+      "level": 8,
+      "chapter": 1
+    },
+    {
+      "symbol": "Ti",
+      "rawMaterial": "イルメナイト",
+      "collectionFacility": "金属",
+      "researchClass": "還元",
+      "level": 9,
+      "chapter": 1
+    },
+    {
+      "symbol": "Cr",
+      "rawMaterial": "クロム鉄鉱",
+      "collectionFacility": "金属",
+      "researchClass": "還元",
+      "level": 9,
+      "chapter": 1
+    },
+    {
+      "symbol": "Te",
+      "rawMaterial": "テルル化物",
+      "collectionFacility": "火山",
+      "researchClass": "分離",
+      "level": 9,
+      "chapter": 1
+    },
+    {
+      "symbol": "Mo",
+      "rawMaterial": "輝水鉛鉱",
+      "collectionFacility": "金属",
+      "researchClass": "還元",
+      "level": 9,
+      "chapter": 1
+    },
+    {
+      "symbol": "Pt",
+      "rawMaterial": "白金鉱石",
+      "collectionFacility": "希少",
+      "researchClass": "精製",
+      "level": 10,
+      "chapter": 1
+    },
+    {
+      "symbol": "Be",
+      "rawMaterial": "緑柱石",
+      "collectionFacility": "希少",
+      "researchClass": "還元",
+      "level": 10,
+      "chapter": 1
+    },
+    {
+      "symbol": "V",
+      "rawMaterial": "バナジン鉛鉱",
+      "collectionFacility": "希少",
+      "researchClass": "還元",
+      "level": 10,
+      "chapter": 1
+    },
+    {
+      "symbol": "Y",
+      "rawMaterial": "ガドリン石",
+      "collectionFacility": "希少",
+      "researchClass": "分離",
+      "level": 10,
+      "chapter": 1
+    },
+    {
+      "symbol": "Zr",
+      "rawMaterial": "ジルコン",
+      "collectionFacility": "希少",
+      "researchClass": "還元",
+      "level": 11,
+      "chapter": 1
+    },
+    {
+      "symbol": "Nb",
+      "rawMaterial": "コルンブ石",
+      "collectionFacility": "希少",
+      "researchClass": "分離",
+      "level": 11,
+      "chapter": 1
+    },
+    {
+      "symbol": "Ta",
+      "rawMaterial": "タンタル石",
+      "collectionFacility": "希少",
+      "researchClass": "分離",
+      "level": 11,
+      "chapter": 1
+    },
+    {
+      "symbol": "Ba",
+      "rawMaterial": "重晶石",
+      "collectionFacility": "希少",
+      "researchClass": "還元",
+      "level": 11,
+      "chapter": 1
+    },
+    {
+      "symbol": "Pd",
+      "rawMaterial": "白金鉱石",
+      "collectionFacility": "希少",
+      "researchClass": "精製",
+      "level": 12,
+      "chapter": 1
+    },
+    {
+      "symbol": "Rh",
+      "rawMaterial": "白金鉱石",
+      "collectionFacility": "希少",
+      "researchClass": "精製",
+      "level": 12,
+      "chapter": 1
+    },
+    {
+      "symbol": "Os",
+      "rawMaterial": "白金鉱石",
+      "collectionFacility": "希少",
+      "researchClass": "精製",
+      "level": 12,
+      "chapter": 1
+    },
+    {
+      "symbol": "Ir",
+      "rawMaterial": "白金鉱石",
+      "collectionFacility": "希少",
+      "researchClass": "精製",
+      "level": 12,
+      "chapter": 1
+    },
+    {
+      "symbol": "La",
+      "rawMaterial": "モナズ石",
+      "collectionFacility": "希少",
+      "researchClass": "希土類分離",
+      "level": 13,
+      "chapter": 1
+    },
+    {
+      "symbol": "Ce",
+      "rawMaterial": "モナズ石",
+      "collectionFacility": "希少",
+      "researchClass": "希土類分離",
+      "level": 13,
+      "chapter": 1
+    },
+    {
+      "symbol": "Tb",
+      "rawMaterial": "ガドリン石",
+      "collectionFacility": "希少",
+      "researchClass": "希土類分離",
+      "level": 13,
+      "chapter": 1
+    },
+    {
+      "symbol": "Er",
+      "rawMaterial": "ガドリン石",
+      "collectionFacility": "希少",
+      "researchClass": "希土類分離",
+      "level": 13,
+      "chapter": 1
+    },
+    {
+      "symbol": "W",
+      "rawMaterial": "灰重石",
+      "collectionFacility": "金属",
+      "researchClass": "還元",
+      "level": 14,
+      "chapter": 1
+    },
+    {
+      "symbol": "Cd",
+      "rawMaterial": "閃亜鉛鉱",
+      "collectionFacility": "金属",
+      "researchClass": "分離",
+      "level": 14,
+      "chapter": 1
+    },
+    {
+      "symbol": "Bi",
+      "rawMaterial": "輝蒼鉛鉱",
+      "collectionFacility": "金属",
+      "researchClass": "製錬",
+      "level": 14,
+      "chapter": 1
+    },
+    {
+      "symbol": "Ru",
+      "rawMaterial": "白金鉱石",
+      "collectionFacility": "希少",
+      "researchClass": "精製",
+      "level": 15,
+      "chapter": 1
+    },
+    {
+      "symbol": "Th",
+      "rawMaterial": "モナズ石",
+      "collectionFacility": "希少",
+      "researchClass": "仮想分離",
+      "level": 15,
+      "chapter": 1
+    },
+    {
+      "symbol": "U",
+      "rawMaterial": "閃ウラン鉱",
+      "collectionFacility": "希少",
+      "researchClass": "仮想分離",
+      "level": 15,
+      "chapter": 1
+    },
+    {
+      "symbol": "Cs",
+      "rawMaterial": "温泉水",
+      "collectionFacility": "火山",
+      "researchClass": "分光",
+      "level": 16,
+      "chapter": 2
+    },
+    {
+      "symbol": "Rb",
+      "rawMaterial": "温泉水",
+      "collectionFacility": "火山",
+      "researchClass": "分光",
+      "level": 16,
+      "chapter": 2
+    },
+    {
+      "symbol": "Tl",
+      "rawMaterial": "黄鉄鉱",
+      "collectionFacility": "金属",
+      "researchClass": "分光",
+      "level": 16,
+      "chapter": 2
+    },
+    {
+      "symbol": "In",
+      "rawMaterial": "閃亜鉛鉱",
+      "collectionFacility": "金属",
+      "researchClass": "分光",
+      "level": 16,
+      "chapter": 2
+    },
+    {
+      "symbol": "Ga",
+      "rawMaterial": "閃亜鉛鉱",
+      "collectionFacility": "金属",
+      "researchClass": "周期表予測",
+      "level": 17,
+      "chapter": 2
+    },
+    {
+      "symbol": "Sc",
+      "rawMaterial": "ユークセン石",
+      "collectionFacility": "希少",
+      "researchClass": "周期表予測",
+      "level": 17,
+      "chapter": 2
+    },
+    {
+      "symbol": "Ge",
+      "rawMaterial": "アルジロダイト",
+      "collectionFacility": "希少",
+      "researchClass": "周期表予測",
+      "level": 17,
+      "chapter": 2
+    },
+    {
+      "symbol": "F",
+      "rawMaterial": "蛍石",
+      "collectionFacility": "火山",
+      "researchClass": "仮想電解",
+      "level": 17,
+      "chapter": 2
+    },
+    {
+      "symbol": "Ar",
+      "rawMaterial": "空気",
+      "collectionFacility": "森林",
+      "researchClass": "気体分離",
+      "level": 18,
+      "chapter": 2
+    },
+    {
+      "symbol": "Ne",
+      "rawMaterial": "空気",
+      "collectionFacility": "森林",
+      "researchClass": "気体分離",
+      "level": 18,
+      "chapter": 2
+    },
+    {
+      "symbol": "Kr",
+      "rawMaterial": "空気",
+      "collectionFacility": "森林",
+      "researchClass": "気体分離",
+      "level": 18,
+      "chapter": 2
+    },
+    {
+      "symbol": "Xe",
+      "rawMaterial": "空気",
+      "collectionFacility": "森林",
+      "researchClass": "気体分離",
+      "level": 18,
+      "chapter": 2
+    },
+    {
+      "symbol": "Pr",
+      "rawMaterial": "モナズ石",
+      "collectionFacility": "希少",
+      "researchClass": "希土類分離",
+      "level": 19,
+      "chapter": 2
+    },
+    {
+      "symbol": "Nd",
+      "rawMaterial": "モナズ石",
+      "collectionFacility": "希少",
+      "researchClass": "希土類分離",
+      "level": 19,
+      "chapter": 2
+    },
+    {
+      "symbol": "Sm",
+      "rawMaterial": "サマルスキー石",
+      "collectionFacility": "希少",
+      "researchClass": "希土類分離",
+      "level": 19,
+      "chapter": 2
+    },
+    {
+      "symbol": "Gd",
+      "rawMaterial": "モナズ石",
+      "collectionFacility": "希少",
+      "researchClass": "希土類分離",
+      "level": 19,
+      "chapter": 2
+    },
+    {
+      "symbol": "Ho",
+      "rawMaterial": "ガドリン石",
+      "collectionFacility": "希少",
+      "researchClass": "希土類分離",
+      "level": 20,
+      "chapter": 2
+    },
+    {
+      "symbol": "Dy",
+      "rawMaterial": "ゼノタイム",
+      "collectionFacility": "希少",
+      "researchClass": "希土類分離",
+      "level": 20,
+      "chapter": 2
+    },
+    {
+      "symbol": "Tm",
+      "rawMaterial": "ゼノタイム",
+      "collectionFacility": "希少",
+      "researchClass": "希土類分離",
+      "level": 20,
+      "chapter": 2
+    },
+    {
+      "symbol": "Yb",
+      "rawMaterial": "ガドリン石",
+      "collectionFacility": "希少",
+      "researchClass": "希土類分離",
+      "level": 20,
+      "chapter": 2
+    },
+    {
+      "symbol": "He",
+      "rawMaterial": "天然ガス",
+      "collectionFacility": "油田",
+      "researchClass": "気体分離",
+      "level": 21,
+      "chapter": 2
+    },
+    {
+      "symbol": "Eu",
+      "rawMaterial": "モナズ石",
+      "collectionFacility": "希少",
+      "researchClass": "希土類分離",
+      "level": 21,
+      "chapter": 2
+    },
+    {
+      "symbol": "Lu",
+      "rawMaterial": "ゼノタイム",
+      "collectionFacility": "希少",
+      "researchClass": "希土類分離",
+      "level": 21,
+      "chapter": 2
+    },
+    {
+      "symbol": "Hf",
+      "rawMaterial": "ジルコン",
+      "collectionFacility": "希少",
+      "researchClass": "X線分析",
+      "level": 21,
+      "chapter": 2
+    },
+    {
+      "symbol": "Re",
+      "rawMaterial": "輝水鉛鉱",
+      "collectionFacility": "金属",
+      "researchClass": "X線分析",
+      "level": 22,
+      "chapter": 2
+    },
+    {
+      "symbol": "Po",
+      "rawMaterial": "閃ウラン鉱",
+      "collectionFacility": "希少",
+      "researchClass": "放射能研究",
+      "level": 22,
+      "chapter": 2
+    },
+    {
+      "symbol": "Ra",
+      "rawMaterial": "閃ウラン鉱",
+      "collectionFacility": "希少",
+      "researchClass": "放射能研究",
+      "level": 22,
+      "chapter": 2
+    },
+    {
+      "symbol": "Rn",
+      "rawMaterial": "仮想研究試料",
+      "collectionFacility": "研究所",
+      "researchClass": "放射能研究",
+      "level": 23,
+      "chapter": 2
+    },
+    {
+      "symbol": "Ac",
+      "rawMaterial": "閃ウラン鉱",
+      "collectionFacility": "希少",
+      "researchClass": "放射能研究",
+      "level": 23,
+      "chapter": 2
+    },
+    {
+      "symbol": "Pa",
+      "rawMaterial": "閃ウラン鉱",
+      "collectionFacility": "希少",
+      "researchClass": "放射能研究",
+      "level": 23,
+      "chapter": 2
+    },
+    {
+      "symbol": "Tc",
+      "rawMaterial": "仮想研究試料",
+      "collectionFacility": "原子核研究センター",
+      "researchClass": "照射",
+      "level": 24,
+      "chapter": 3
+    },
+    {
+      "symbol": "Fr",
+      "rawMaterial": "仮想研究試料",
+      "collectionFacility": "原子核研究センター",
+      "researchClass": "崩壊",
+      "level": 24,
+      "chapter": 3
+    },
+    {
+      "symbol": "At",
+      "rawMaterial": "仮想研究試料",
+      "collectionFacility": "原子核研究センター",
+      "researchClass": "照射",
+      "level": 24,
+      "chapter": 3
+    },
+    {
+      "symbol": "Np",
+      "rawMaterial": "仮想研究試料",
+      "collectionFacility": "原子核研究センター",
+      "researchClass": "照射",
+      "level": 24,
+      "chapter": 3
+    },
+    {
+      "symbol": "Pu",
+      "rawMaterial": "仮想研究試料",
+      "collectionFacility": "原子核研究センター",
+      "researchClass": "照射",
+      "level": 25,
+      "chapter": 3
+    },
+    {
+      "symbol": "Am",
+      "rawMaterial": "仮想研究試料",
+      "collectionFacility": "原子核研究センター",
+      "researchClass": "照射",
+      "level": 25,
+      "chapter": 3
+    },
+    {
+      "symbol": "Cm",
+      "rawMaterial": "仮想研究試料",
+      "collectionFacility": "原子核研究センター",
+      "researchClass": "照射",
+      "level": 25,
+      "chapter": 3
+    },
+    {
+      "symbol": "Pm",
+      "rawMaterial": "仮想研究試料",
+      "collectionFacility": "原子核研究センター",
+      "researchClass": "生成物分析",
+      "level": 25,
+      "chapter": 3
+    },
+    {
+      "symbol": "Bk",
+      "rawMaterial": "仮想研究試料",
+      "collectionFacility": "原子核研究センター",
+      "researchClass": "照射",
+      "level": 26,
+      "chapter": 3
+    },
+    {
+      "symbol": "Cf",
+      "rawMaterial": "仮想研究試料",
+      "collectionFacility": "原子核研究センター",
+      "researchClass": "照射",
+      "level": 26,
+      "chapter": 3
+    },
+    {
+      "symbol": "Es",
+      "rawMaterial": "仮想研究試料",
+      "collectionFacility": "原子核研究センター",
+      "researchClass": "生成物分析",
+      "level": 26,
+      "chapter": 3
+    },
+    {
+      "symbol": "Fm",
+      "rawMaterial": "仮想研究試料",
+      "collectionFacility": "原子核研究センター",
+      "researchClass": "生成物分析",
+      "level": 26,
+      "chapter": 3
+    },
+    {
+      "symbol": "Md",
+      "rawMaterial": "仮想研究試料",
+      "collectionFacility": "原子核研究センター",
+      "researchClass": "融合",
+      "level": 27,
+      "chapter": 3
+    },
+    {
+      "symbol": "No",
+      "rawMaterial": "仮想研究試料",
+      "collectionFacility": "原子核研究センター",
+      "researchClass": "融合",
+      "level": 27,
+      "chapter": 3
+    },
+    {
+      "symbol": "Lr",
+      "rawMaterial": "仮想研究試料",
+      "collectionFacility": "原子核研究センター",
+      "researchClass": "融合",
+      "level": 27,
+      "chapter": 3
+    },
+    {
+      "symbol": "Rf",
+      "rawMaterial": "仮想研究試料",
+      "collectionFacility": "原子核研究センター",
+      "researchClass": "融合",
+      "level": 27,
+      "chapter": 3
+    },
+    {
+      "symbol": "Db",
+      "rawMaterial": "仮想研究試料",
+      "collectionFacility": "原子核研究センター",
+      "researchClass": "融合",
+      "level": 28,
+      "chapter": 3
+    },
+    {
+      "symbol": "Sg",
+      "rawMaterial": "仮想研究試料",
+      "collectionFacility": "原子核研究センター",
+      "researchClass": "融合",
+      "level": 28,
+      "chapter": 3
+    },
+    {
+      "symbol": "Bh",
+      "rawMaterial": "仮想研究試料",
+      "collectionFacility": "原子核研究センター",
+      "researchClass": "融合",
+      "level": 28,
+      "chapter": 3
+    },
+    {
+      "symbol": "Hs",
+      "rawMaterial": "仮想研究試料",
+      "collectionFacility": "原子核研究センター",
+      "researchClass": "融合",
+      "level": 28,
+      "chapter": 3
+    },
+    {
+      "symbol": "Mt",
+      "rawMaterial": "仮想研究試料",
+      "collectionFacility": "原子核研究センター",
+      "researchClass": "融合",
+      "level": 29,
+      "chapter": 3
+    },
+    {
+      "symbol": "Ds",
+      "rawMaterial": "仮想研究試料",
+      "collectionFacility": "原子核研究センター",
+      "researchClass": "融合",
+      "level": 29,
+      "chapter": 3
+    },
+    {
+      "symbol": "Rg",
+      "rawMaterial": "仮想研究試料",
+      "collectionFacility": "原子核研究センター",
+      "researchClass": "融合",
+      "level": 29,
+      "chapter": 3
+    },
+    {
+      "symbol": "Cn",
+      "rawMaterial": "仮想研究試料",
+      "collectionFacility": "原子核研究センター",
+      "researchClass": "融合",
+      "level": 29,
+      "chapter": 3
+    },
+    {
+      "symbol": "Nh",
+      "rawMaterial": "仮想研究試料",
+      "collectionFacility": "原子核研究センター",
+      "researchClass": "融合",
+      "level": 29,
+      "chapter": 3
+    },
+    {
+      "symbol": "Fl",
+      "rawMaterial": "仮想研究試料",
+      "collectionFacility": "原子核研究センター",
+      "researchClass": "融合",
+      "level": 30,
+      "chapter": 3
+    },
+    {
+      "symbol": "Mc",
+      "rawMaterial": "仮想研究試料",
+      "collectionFacility": "原子核研究センター",
+      "researchClass": "融合",
+      "level": 30,
+      "chapter": 3
+    },
+    {
+      "symbol": "Lv",
+      "rawMaterial": "仮想研究試料",
+      "collectionFacility": "原子核研究センター",
+      "researchClass": "融合",
+      "level": 30,
+      "chapter": 3
+    },
+    {
+      "symbol": "Ts",
+      "rawMaterial": "仮想研究試料",
+      "collectionFacility": "原子核研究センター",
+      "researchClass": "融合",
+      "level": 30,
+      "chapter": 3
+    },
+    {
+      "symbol": "Og",
+      "rawMaterial": "仮想研究試料",
+      "collectionFacility": "原子核研究センター",
+      "researchClass": "融合",
+      "level": 30,
+      "chapter": 3
+    }
+  ]
+}

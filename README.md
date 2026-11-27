@@ -42,3 +42,8 @@ This batches multiple images and all manifest mappings into one atomic developme
 | Experiment | copperExtraction | experiments/copper/extraction-v001.webp | Copper extraction |
 | Experiment | saltWaterElectrolysis | experiments/chlorine/salt-water-electrolysis-v001.webp | Brine electrolysis |
 | Experiment | sulfurCrystalAnalysis | experiments/sulfur/crystal-analysis-v001.webp | Sulfur lab illustration |
+
+
+## Chat mode data workflow
+
+See [`docs/CHAT-MODE.md`](docs/CHAT-MODE.md) for the edit, image registration, validation, verified publication, and rollback procedure. Development edits go to `development`; only a successful Actions validation advances the immutable snapshot pointer on `verified-development`. The game client must read that pointer and fetch files by its pinned commit SHA. Do not edit `main` for development changes.
