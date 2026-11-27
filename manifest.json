@@ -63,9 +63,9 @@
     "sulfurCrystal": "mission-materials/sulfur/v001.webp"
   },
   "experiments": {
-    "copperPowder": "experiments/copper/powder-v001.webp",
-    "copperOxide": "experiments/copper/oxide-v001.webp",
-    "copperExtraction": "experiments/copper/extraction-v001.webp",
+    "copperPowder": "experiments/copper/powder-v002.webp",
+    "copperOxide": "experiments/copper/oxide-v002.webp",
+    "copperExtraction": "experiments/copper/extraction-v002.webp",
     "saltWaterElectrolysis": "experiments/chlorine/salt-water-electrolysis-v001.webp",
     "sulfurCrystalAnalysis": "experiments/sulfur/crystal-analysis-v001.webp",
     "recrystallizationStep01": "experiments/recrystallization/step-01-v001.png",
