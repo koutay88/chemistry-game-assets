@@ -91,6 +91,14 @@
     "radioactivityResearchStep01": "experiments/radioactivity-research/step-01-v001.webp",
     "radioactivityResearchStep02": "experiments/radioactivity-research/step-02-v001.webp",
     "irradiationStep01": "experiments/irradiation/step-01-v001.webp",
-    "irradiationStep02": "experiments/irradiation/step-02-v001.webp"
+    "irradiationStep02": "experiments/irradiation/step-02-v001.webp",
+    "sodiumStep01": "experiments/sodium/step-01-v001.webp",
+    "sodiumStep02": "experiments/sodium/step-02-v001.webp",
+    "magnesiumCalciumLithiumStep01": "experiments/magnesium-calcium-lithium/step-01-v001.webp",
+    "magnesiumCalciumLithiumStep02": "experiments/magnesium-calcium-lithium/step-02-v001.webp",
+    "potassiumStep01": "experiments/potassium/step-01-v001.webp",
+    "potassiumStep02": "experiments/potassium/step-02-v001.webp",
+    "tinManganeseStep01": "experiments/tin-manganese/step-01-v001.webp",
+    "tinManganeseStep02": "experiments/tin-manganese/step-02-v001.webp"
   }
 }
