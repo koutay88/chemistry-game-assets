@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "gameId": "world-chem-collection",
-  "revision": 3,
+  "revision": 4,
   "ui": {
     "rules": [],
     "text": {}
@@ -61,6 +61,24 @@
     "ending": {
       "requiredElements": 118,
       "requiresHomeVisit": true
+    }
+  },
+  "collection": {
+    "chapter1": {
+      "mode": "random",
+      "usefulMaterialChance": 0.8,
+      "noDiscoveryChance": 1,
+      "rescueAfterMisses": 2,
+      "lastElementChance": 1,
+      "ignoreSufficientInventory": true,
+      "yellowRule": "useful-candidates"
+    },
+    "chapter2": {
+      "mode": "selected",
+      "selectedMaterialChance": 1,
+      "showInferredElements": true,
+      "showDiscoveredElements": true,
+      "highlightSelectedMaterial": true
     }
   }
 }
