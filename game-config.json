@@ -1,13 +1,19 @@
 {
   "schemaVersion": 1,
   "gameId": "world-chem-collection",
-  "revision": 1,
+  "revision": 3,
   "ui": {
     "rules": [],
     "text": {}
   },
   "balance": {},
-  "facilities": {},
+  "facilities": {
+    "10": 6,
+    "12": 16,
+    "16": 10,
+    "18": 3,
+    "19": 20
+  },
   "materials": {},
   "routes": {},
   "reactions": {},
@@ -19,38 +25,38 @@
     "chapters": {
       "chapter1": {
         "startLevel": 1,
-        "endLevel": 15,
+        "endLevel": 9,
         "clearElementCount": 58
       },
       "chapter2": {
-        "startLevel": 16,
-        "endLevel": 23,
+        "startLevel": 10,
+        "endLevel": 19,
         "clearElementCount": 88
       },
       "chapter3": {
-        "startLevel": 24,
+        "startLevel": 20,
         "endLevel": 30,
         "clearElementCount": 118
       }
     },
     "homePromotion": {
       "chapter2": {
-        "requiredLevel": 15,
+        "requiredLevel": 9,
         "requiredElements": 58
       },
       "chapter3": {
-        "requiredLevel": 23,
+        "requiredLevel": 19,
         "requiredElements": 88
       }
     },
     "convenienceUnlocks": {
-      "home": 3,
-      "withinRoll": 8,
-      "tripleAction": 13,
-      "stay": 18,
-      "periodicSupport": 20,
-      "virtualOrder": 25,
-      "researchQueue": 28
+      "home": 2,
+      "withinRoll": 4,
+      "tripleAction": 7,
+      "stay": 12,
+      "periodicSupport": 15,
+      "virtualOrder": 22,
+      "researchQueue": 25
     },
     "ending": {
       "requiredElements": 118,
