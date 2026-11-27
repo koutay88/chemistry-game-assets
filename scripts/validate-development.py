@@ -61,7 +61,7 @@ for i, row in enumerate(levels, 1):
 if levels[0]["requiredFound"] != 0 or levels[-1]["unlockCap"] != 118:
     fail("Level 1 must start at zero and level 30 must unlock all 118 elements")
 chapters = master.get("chapters")
-expected_ranges = {1: [1, 15], 2: [16, 23], 3: [24, 30]}
+expected_ranges = {i: chapter_ranges[i-1] for i in range(1, 4)}
 if not isinstance(chapters, list) or len(chapters) != 3:
     fail("chapter-master must define three chapters")
 for i, chapter in enumerate(chapters, 1):
@@ -84,12 +84,52 @@ for row in master["elements"]:
     counts[chapter] += 1
 if counts != {1: 58, 2: 30, 3: 30}:
     fail(f"Chapter element totals are not 58/30/30: {counts}")
+cumulative_counts = {1: counts[1], 2: counts[1] + counts[2], 3: sum(counts.values())}
+for i in range(1, 4):
+    if clear_counts[i-1] > cumulative_counts[i]:
+        fail(f"Chapter {i} requires more elements than exist before its clear")
 for i, chapter in enumerate(chapters, 1):
     if chapter.get("cumulativeElements") != sum(counts[n] for n in range(1, i+1)):
         fail(f"Chapter {i} cumulative element count is inconsistent")
 
 if config.get("schemaVersion") != 1 or config.get("gameId") != "world-chem-collection" or not is_int(config.get("revision"), 0, 2**31-1):
     fail("Unsupported game-config schema, gameId, or revision")
+progression = config.get("progression")
+if not isinstance(progression, dict):
+    fail("progression settings are required")
+chapter_settings = progression.get("chapters")
+if not isinstance(chapter_settings, dict) or set(chapter_settings) != {"chapter1", "chapter2", "chapter3"}:
+    fail("progression.chapters must define chapter1 through chapter3")
+chapter_ranges = []
+clear_counts = []
+for i in range(1, 4):
+    chapter_setting = chapter_settings[f"chapter{i}"]
+    if not isinstance(chapter_setting, dict) or set(chapter_setting) != {"startLevel", "endLevel", "clearElementCount"}:
+        fail(f"Invalid progression chapter{i} settings")
+    if not is_int(chapter_setting.get("startLevel"), 1, 30) or not is_int(chapter_setting.get("endLevel"), 1, 30) or not is_int(chapter_setting.get("clearElementCount"), 1, 118):
+        fail(f"Invalid progression chapter{i} level range or clear count")
+    chapter_ranges.append([chapter_setting["startLevel"], chapter_setting["endLevel"]])
+    clear_counts.append(chapter_setting["clearElementCount"])
+if chapter_ranges[0][0] != 1 or chapter_ranges[-1][1] != 30 or any(chapter_ranges[i][0] != chapter_ranges[i-1][1] + 1 for i in (1, 2)):
+    fail("Chapter level ranges must cover levels 1–30 without gaps or overlaps")
+if any(clear_counts[i] < clear_counts[i-1] for i in (1, 2)):
+    fail("Chapter clear counts must not regress")
+promotions = progression.get("homePromotion")
+if not isinstance(promotions, dict) or set(promotions) != {"chapter2", "chapter3"}:
+    fail("homePromotion must define chapter2 and chapter3")
+for i in (2, 3):
+    condition = promotions[f"chapter{i}"]
+    if not isinstance(condition, dict) or set(condition) != {"requiredLevel", "requiredElements"} or not is_int(condition.get("requiredLevel"), 1, 30) or not is_int(condition.get("requiredElements"), 1, 118):
+        fail(f"Invalid home promotion condition for chapter{i}")
+    if condition["requiredElements"] < clear_counts[i-2]:
+        fail(f"Chapter{i} father conversation cannot precede the previous chapter clear")
+convenience_keys = {"home", "withinRoll", "tripleAction", "stay", "periodicSupport", "virtualOrder", "researchQueue"}
+convenience = progression.get("convenienceUnlocks")
+if not isinstance(convenience, dict) or set(convenience) != convenience_keys or any(not is_int(value, 1, 30) for value in convenience.values()):
+    fail("convenienceUnlocks must define seven valid unlock levels")
+ending = progression.get("ending")
+if not isinstance(ending, dict) or set(ending) != {"requiredElements", "requiresHomeVisit"} or not is_int(ending.get("requiredElements"), 1, 118) or not isinstance(ending.get("requiresHomeVisit"), bool):
+    fail("Invalid ending conditions")
 index_materials = set(index["materialIds"])
 index_routes = set(index["routeIds"])
 index_reactions = set(index["reactionIds"])
