@@ -26,7 +26,11 @@
     "sample-master-021": "materials/air/v001.webp",
     "sample-master-022": "materials/bone-ash/v001.webp",
     "sample-master-023": "materials/wood-ash/v001.webp",
-    "sample-master-024": "materials/seaweed/v001.webp"
+    "sample-master-024": "materials/seaweed/v001.webp",
+    "sample-master-025": "materials/brine-bearing-water/v001.webp",
+    "sample-master-026": "materials/celestite/v001.webp",
+    "sample-master-027": "materials/cobaltite/v001.webp",
+    "sample-master-028": "materials/pentlandite/v001.webp"
   },
   "missionMaterials": {
     "copperOre": "mission-materials/copper-ore/v002.png",
