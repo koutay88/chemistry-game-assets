@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "gameId": "world-chem-collection",
-  "revision": 2,
+  "revision": 3,
   "ui": {
     "rules": [],
     "text": {}
@@ -35,7 +35,7 @@
       },
       "chapter3": {
         "startLevel": 20,
-        "endLevel": 29,
+        "endLevel": 30,
         "clearElementCount": 118
       }
     },
