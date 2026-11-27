@@ -18,7 +18,11 @@
     "sample-master-012": "materials/quartz/v001.webp",
     "sample-master-014": "materials/cinnabar/v001.webp",
     "sample-master-015": "materials/arsenopyrite/v001.webp",
-    "sample-master-016": "materials/pyrolusite/v001.webp"
+    "sample-master-016": "materials/pyrolusite/v001.webp",
+    "sample-master-017": "materials/sphalerite/v001.webp",
+    "sample-master-018": "materials/gypsum/v001.webp",
+    "sample-master-019": "materials/borax/v001.webp",
+    "sample-master-020": "materials/wood/v001.webp"
   },
   "missionMaterials": {
     "copperOre": "mission-materials/copper-ore/v002.png",
