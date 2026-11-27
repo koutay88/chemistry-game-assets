@@ -20,6 +20,8 @@
     "copperOxide": "experiments/copper/oxide-v001.webp",
     "copperExtraction": "experiments/copper/extraction-v001.webp",
     "saltWaterElectrolysis": "experiments/chlorine/salt-water-electrolysis-v001.webp",
-    "sulfurCrystalAnalysis": "experiments/sulfur/crystal-analysis-v001.webp"
+    "sulfurCrystalAnalysis": "experiments/sulfur/crystal-analysis-v001.webp",
+    "recrystallizationStep01": "experiments/recrystallization/step-01-v001.png",
+    "recrystallizationStep02": "experiments/recrystallization/step-02-v001.png"
   }
 }
