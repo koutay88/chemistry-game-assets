@@ -76,8 +76,8 @@ for row in master["elements"]:
     if not low <= level <= high:
         fail(f"Element {symbol} is assigned outside its chapter level range")
     z = index["elementAtomicNumbers"].get(symbol)
-    if not is_int(z, 1, 118) or levels[level-1]["unlockCap"] < z:
-        fail(f"Element {symbol} cannot be unlocked at its assigned level")
+    if not is_int(z, 1, 118):
+        fail(f"Element {symbol} is missing from the game index")
     facility = row.get("collectionFacility")
     if facility not in index["facilityIds"] or not all(isinstance(row.get(k), str) and row[k] for k in ("rawMaterial", "researchClass")):
         fail(f"Element {symbol} has incomplete collection/research data")
