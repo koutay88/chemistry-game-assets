@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "materials": {
-    "S": "materials/natural-sulfur/v001.webp",
+    "S": "materials/natural-sulfur/v002.webp",
     "Cu": "materials/copper/v001.webp",
     "sample-master-012": "materials/amethyst/v002.png",
     "sample-master-003": "materials/salt-water/v001.webp",
