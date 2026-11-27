@@ -71,6 +71,16 @@
     "recrystallizationStep01": "experiments/recrystallization/step-01-v001.png",
     "recrystallizationStep02": "experiments/recrystallization/step-02-v001.png",
     "ironReductionStep01": "experiments/iron-reduction/step-01-v001.webp",
-    "ironReductionStep02": "experiments/iron-reduction/step-02-v001.webp"
+    "ironReductionStep02": "experiments/iron-reduction/step-02-v001.webp",
+    "moltenSaltElectrolysisStep01": "experiments/molten-salt-electrolysis/step-01-v001.webp",
+    "moltenSaltElectrolysisStep02": "experiments/molten-salt-electrolysis/step-02-v001.webp",
+    "separationStep01": "experiments/separation/step-01-v001.webp",
+    "separationStep02": "experiments/separation/step-02-v001.webp",
+    "smeltingStep01": "experiments/smelting/step-01-v001.webp",
+    "smeltingStep02": "experiments/smelting/step-02-v001.webp",
+    "carbonizationStep01": "experiments/carbonization/step-01-v001.webp",
+    "carbonizationStep02": "experiments/carbonization/step-02-v001.webp",
+    "rareEarthSeparationStep01": "experiments/rare-earth-separation/step-01-v001.webp",
+    "rareEarthSeparationStep02": "experiments/rare-earth-separation/step-02-v001.webp"
   }
 }
