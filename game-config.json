@@ -1,13 +1,60 @@
 {
   "schemaVersion": 1,
   "gameId": "world-chem-collection",
-  "revision": 0,
-  "ui": {"rules": [], "text": {}},
+  "revision": 1,
+  "ui": {
+    "rules": [],
+    "text": {}
+  },
   "balance": {},
   "facilities": {},
   "materials": {},
   "routes": {},
   "reactions": {},
   "study": {},
-  "story": {"chapterOneClear": []}
+  "story": {
+    "chapterOneClear": []
+  },
+  "progression": {
+    "chapters": {
+      "chapter1": {
+        "startLevel": 1,
+        "endLevel": 15,
+        "clearElementCount": 58
+      },
+      "chapter2": {
+        "startLevel": 16,
+        "endLevel": 23,
+        "clearElementCount": 88
+      },
+      "chapter3": {
+        "startLevel": 24,
+        "endLevel": 30,
+        "clearElementCount": 118
+      }
+    },
+    "homePromotion": {
+      "chapter2": {
+        "requiredLevel": 15,
+        "requiredElements": 58
+      },
+      "chapter3": {
+        "requiredLevel": 23,
+        "requiredElements": 88
+      }
+    },
+    "convenienceUnlocks": {
+      "home": 3,
+      "withinRoll": 8,
+      "tripleAction": 13,
+      "stay": 18,
+      "periodicSupport": 20,
+      "virtualOrder": 25,
+      "researchQueue": 28
+    },
+    "ending": {
+      "requiredElements": 118,
+      "requiresHomeVisit": true
+    }
+  }
 }
