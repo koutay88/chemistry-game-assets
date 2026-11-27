@@ -81,6 +81,16 @@
     "carbonizationStep01": "experiments/carbonization/step-01-v001.webp",
     "carbonizationStep02": "experiments/carbonization/step-02-v001.webp",
     "rareEarthSeparationStep01": "experiments/rare-earth-separation/step-01-v001.webp",
-    "rareEarthSeparationStep02": "experiments/rare-earth-separation/step-02-v001.webp"
+    "rareEarthSeparationStep02": "experiments/rare-earth-separation/step-02-v001.webp",
+    "spectroscopyStep01": "experiments/spectroscopy/step-01-v001.webp",
+    "spectroscopyStep02": "experiments/spectroscopy/step-02-v001.webp",
+    "gasSeparationStep01": "experiments/gas-separation/step-01-v001.webp",
+    "gasSeparationStep02": "experiments/gas-separation/step-02-v001.webp",
+    "xrayAnalysisStep01": "experiments/xray-analysis/step-01-v001.webp",
+    "xrayAnalysisStep02": "experiments/xray-analysis/step-02-v001.webp",
+    "radioactivityResearchStep01": "experiments/radioactivity-research/step-01-v001.webp",
+    "radioactivityResearchStep02": "experiments/radioactivity-research/step-02-v001.webp",
+    "irradiationStep01": "experiments/irradiation/step-01-v001.webp",
+    "irradiationStep02": "experiments/irradiation/step-02-v001.webp"
   }
 }
