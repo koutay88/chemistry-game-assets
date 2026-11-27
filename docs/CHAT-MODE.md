@@ -15,6 +15,19 @@ The public game's source branch and the asset repository's `main` branch are sep
 
 For a new image, first add the binary file to the `development` branch, then add or change its stable ID in `manifest.json` in the same candidate commit. Use PNG or WebP, with the manifest path format checked by CI. Preserve existing IDs and leave unrelated mappings untouched.
 
+
+### Progression settings (game-config.json)
+
+The `progression` object controls these settings without changing the save format:
+
+- `chapters.chapter1/2/3.startLevel` and `endLevel`: contiguous level ranges covering levels 1–30.
+- `chapters.chapter1/2/3.clearElementCount`: cumulative number of elements required at that chapter's clear; defaults are 58, 88, and 118.
+- `homePromotion.chapter2/3.requiredLevel` and `requiredElements`: conditions checked when the player returns home and receives the father's next-chapter conversation.
+- `convenienceUnlocks`: unlock levels for `home`, `withinRoll`, `tripleAction` (the three lab/research action keys), `stay`, `periodicSupport`, `virtualOrder`, and `researchQueue`.
+- `ending.requiredElements` and `requiresHomeVisit`: collection count and whether the player must return home before the existing completion flow runs.
+
+Current defaults preserve the existing game: chapter ranges 1–15, 16–23, 24–30; father conversations at 15/58 and 23/88; convenience levels 3, 8, 13, 18, 20, 25, 28; and completion after all 118 elements at home. CI rejects gaps/overlaps in chapter ranges, impossible element counts, incomplete feature keys, and invalid promotion or ending conditions. Change only the requested values in `game-config.json`; the validator promotes the candidate only after all existing data and image checks pass.
+
 ## Chat mode request template
 
 > In `koutay88/chemistry-game-assets`, edit only the `development` branch. Change `<file/path>` as follows: `<precise change>`. Keep game rules and save schema unchanged. Run the development validation workflow and report the commit and Actions result. Do not edit `main` or the public game.
