@@ -54,7 +54,9 @@
     "sample-master-049": "materials/euxenite/v001.webp",
     "sample-master-050": "materials/argyrodite/v001.webp",
     "sample-master-051": "materials/fluorite/v001.webp",
-    "sample-master-052": "materials/samarskite/v001.webp"
+    "sample-master-052": "materials/samarskite/v001.webp",
+    "sample-master-053": "materials/xenotime/v001.webp",
+    "sample-master-054": "materials/natural-gas/v001.webp"
   },
   "missionMaterials": {
     "copperOre": "mission-materials/copper-ore/v002.png",
