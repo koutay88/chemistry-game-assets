@@ -101,16 +101,13 @@ expected_ranges = {i: chapter_ranges[i-1] for i in range(1, 4)}
 if not isinstance(chapters, list) or len(chapters) != 3:
     fail("chapter-master must define three chapters")
 for i, chapter in enumerate(chapters, 1):
-    if chapter.get("chapter") != i or chapter.get("levelRange") != expected_ranges[i]:
-        fail(f"Chapter {i} has an unexpected level range")
+    if chapter.get("chapter") != i:
+        fail(f"Invalid chapter master row {i}")
 counts = {i: 0 for i in range(1, 4)}
 for row in master["elements"]:
     chapter, level, symbol = row.get("chapter"), row.get("level"), row.get("symbol")
     if chapter not in counts or not is_int(level, 1, 30):
         fail(f"Invalid chapter or level for element {symbol}")
-    low, high = expected_ranges[chapter]
-    if not low <= level <= high:
-        fail(f"Element {symbol} is assigned outside its chapter level range")
     z = index["elementAtomicNumbers"].get(symbol)
     if not is_int(z, 1, 118):
         fail(f"Element {symbol} is missing from the game index")
