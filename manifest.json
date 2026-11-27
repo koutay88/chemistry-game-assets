@@ -34,7 +34,11 @@
     "sample-master-029": "materials/stibnite/v001.webp",
     "sample-master-030": "materials/sulfur-ore/v001.webp",
     "sample-master-031": "materials/ilmenite/v001.webp",
-    "sample-master-032": "materials/chromite/v001.webp"
+    "sample-master-032": "materials/chromite/v001.webp",
+    "sample-master-033": "materials/telluride/v001.webp",
+    "sample-master-034": "materials/molybdenite/v001.webp",
+    "sample-master-035": "materials/platinum-ore/v001.webp",
+    "sample-master-036": "materials/beryl/v001.webp"
   },
   "missionMaterials": {
     "copperOre": "mission-materials/copper-ore/v002.png",
