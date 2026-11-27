@@ -60,6 +60,26 @@ for i, row in enumerate(levels, 1):
         fail(f"Level {i} requires more discoveries than its unlock cap")
 if levels[0]["requiredFound"] != 0 or levels[-1]["unlockCap"] != 118:
     fail("Level 1 must start at zero and level 30 must unlock all 118 elements")
+collection = config.get("collection")
+if collection is not None:
+    if not isinstance(collection, dict) or set(collection) != {"chapter1", "chapter2"}:
+        fail("collection must define chapter1 and chapter2")
+    ch1 = collection["chapter1"]
+    ch2 = collection["chapter2"]
+    if not isinstance(ch1, dict) or set(ch1) != {"mode", "usefulMaterialChance", "noDiscoveryChance", "rescueAfterMisses", "lastElementChance", "ignoreSufficientInventory", "yellowRule"}:
+        fail("Invalid collection.chapter1 settings")
+    if ch1.get("mode") != "random" or ch1.get("yellowRule") != "useful-candidates" or not isinstance(ch1.get("ignoreSufficientInventory"), bool):
+        fail("Invalid chapter1 collection mode or recommendation rule")
+    for key in ("usefulMaterialChance", "noDiscoveryChance", "lastElementChance"):
+        value = ch1.get(key)
+        if not isinstance(value, (int, float)) or isinstance(value, bool) or not 0 <= value <= 1:
+            fail(f"collection.chapter1.{key} must be between 0 and 1")
+    if not is_int(ch1.get("rescueAfterMisses"), 0, 10):
+        fail("collection.chapter1.rescueAfterMisses must be between 0 and 10")
+    if not isinstance(ch2, dict) or set(ch2) != {"mode", "selectedMaterialChance", "showInferredElements", "showDiscoveredElements", "highlightSelectedMaterial"}:
+        fail("Invalid collection.chapter2 settings")
+    if ch2.get("mode") != "selected" or ch2.get("selectedMaterialChance") != 1 or any(not isinstance(ch2.get(key), bool) for key in ("showInferredElements", "showDiscoveredElements", "highlightSelectedMaterial")):
+        fail("Invalid chapter2 collection mode, guarantee, or display settings")
 progression = config.get("progression")
 if not isinstance(progression, dict):
     fail("progression settings are required")
