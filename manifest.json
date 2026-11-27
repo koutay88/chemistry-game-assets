@@ -42,7 +42,11 @@
     "sample-master-037": "materials/vanadinite/v001.webp",
     "sample-master-038": "materials/gadolinite/v001.webp",
     "sample-master-039": "materials/zircon/v001.webp",
-    "sample-master-040": "materials/columbite/v001.webp"
+    "sample-master-040": "materials/columbite/v001.webp",
+    "sample-master-041": "materials/tantalite/v001.webp",
+    "sample-master-042": "materials/barite/v001.webp",
+    "sample-master-043": "materials/monazite/v001.webp",
+    "sample-master-044": "materials/scheelite/v001.webp"
   },
   "missionMaterials": {
     "copperOre": "mission-materials/copper-ore/v002.png",
