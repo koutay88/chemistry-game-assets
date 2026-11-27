@@ -50,7 +50,11 @@
     "sample-master-045": "materials/bismuthinite/v001.webp",
     "sample-master-046": "materials/uraninite/v001.webp",
     "sample-master-047": "materials/hot-spring-water/v001.webp",
-    "sample-master-048": "materials/pyrite/v001.webp"
+    "sample-master-048": "materials/pyrite/v001.webp",
+    "sample-master-049": "materials/euxenite/v001.webp",
+    "sample-master-050": "materials/argyrodite/v001.webp",
+    "sample-master-051": "materials/fluorite/v001.webp",
+    "sample-master-052": "materials/samarskite/v001.webp"
   },
   "missionMaterials": {
     "copperOre": "mission-materials/copper-ore/v002.png",
