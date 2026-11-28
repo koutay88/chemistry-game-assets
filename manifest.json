@@ -119,6 +119,16 @@
     "chromiumVanadiumStep01": "experiments/chromium-vanadium/step-01-v001.webp",
     "chromiumVanadiumStep02": "experiments/chromium-vanadium/step-02-v001.webp",
     "boronStep01": "experiments/boron/step-01-v001.webp",
-    "boronStep02": "experiments/boron/step-02-v001.webp"
+    "boronStep02": "experiments/boron/step-02-v001.webp",
+    "molybdenumTungstenStep01": "experiments/molybdenum-tungsten/step-01-v001.webp",
+    "molybdenumTungstenStep02": "experiments/molybdenum-tungsten/step-02-v001.webp",
+    "phosphorusStep01": "experiments/phosphorus/step-01-v001.webp",
+    "phosphorusStep02": "experiments/phosphorus/step-02-v001.webp",
+    "aluminiumStep01": "experiments/aluminium/step-01-v001.webp",
+    "aluminiumStep02": "experiments/aluminium/step-02-v001.webp",
+    "goldStep01": "experiments/gold/step-01-v001.webp",
+    "goldStep02": "experiments/gold/step-02-v001.webp",
+    "silverStep01": "experiments/silver/step-01-v001.webp",
+    "silverStep02": "experiments/silver/step-02-v001.webp"
   }
 }
