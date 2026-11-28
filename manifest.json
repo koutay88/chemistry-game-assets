@@ -139,6 +139,14 @@
     "heliumStep01": "experiments/helium/step-01-v001.webp",
     "heliumStep02": "experiments/helium/step-02-v001.webp",
     "virtualSeparationStep01": "experiments/virtual-separation/step-01-v001.webp",
-    "virtualSeparationStep02": "experiments/virtual-separation/step-02-v001.webp"
+    "virtualSeparationStep02": "experiments/virtual-separation/step-02-v001.webp",
+    "predictionStep01": "experiments/prediction/step-01-v001.webp",
+    "virtualElectrolysisStep01": "experiments/virtual-electrolysis/step-01-v001.webp",
+    "virtualElectrolysisStep02": "experiments/virtual-electrolysis/step-02-v001.webp",
+    "decayStep01": "experiments/decay/step-01-v001.webp",
+    "productAnalysisStep01": "experiments/product-analysis/step-01-v001.webp",
+    "fusionStep01": "experiments/fusion/step-01-v001.webp",
+    "fusionStep02": "experiments/fusion/step-02-v001.webp",
+    "fusionStep03": "experiments/fusion/step-03-v001.webp"
   }
 }
