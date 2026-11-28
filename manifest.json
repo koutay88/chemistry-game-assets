@@ -129,6 +129,16 @@
     "goldStep01": "experiments/gold/step-01-v001.webp",
     "goldStep02": "experiments/gold/step-02-v001.webp",
     "silverStep01": "experiments/silver/step-01-v001.webp",
-    "silverStep02": "experiments/silver/step-02-v001.webp"
+    "silverStep02": "experiments/silver/step-02-v001.webp",
+    "platinumGroupStep01": "experiments/platinum-group/step-01-v001.webp",
+    "platinumGroupStep02": "experiments/platinum-group/step-02-v001.webp",
+    "bromineStep01": "experiments/bromine/step-01-v001.webp",
+    "bromineStep02": "experiments/bromine/step-02-v001.webp",
+    "iodineStep01": "experiments/iodine/step-01-v001.webp",
+    "iodineStep02": "experiments/iodine/step-02-v001.webp",
+    "heliumStep01": "experiments/helium/step-01-v001.webp",
+    "heliumStep02": "experiments/helium/step-02-v001.webp",
+    "virtualSeparationStep01": "experiments/virtual-separation/step-01-v001.webp",
+    "virtualSeparationStep02": "experiments/virtual-separation/step-02-v001.webp"
   }
 }
