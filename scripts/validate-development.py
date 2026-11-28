@@ -4,6 +4,7 @@ import json
 import re
 import sys
 from pathlib import Path
+from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -274,17 +275,32 @@ for scene in scenes:
 
 if manifest.get("schemaVersion") != 1:
     fail("Unsupported manifest schema")
-asset_fields={"materials":"materials","missionMaterials":"mission-materials","experiments":"experiments"}
+asset_fields={"materials":"materials","missionMaterials":"mission-materials","experiments":"experiments","elements":"elements","characters":"characters","facilities":"facilities","backgrounds":"backgrounds"}
 total=0
 for field,directory in asset_fields.items():
-    mappings=manifest.get(field)
+    mappings=manifest.get(field,{} if field in {"elements","characters","facilities","backgrounds"} else None)
     if not isinstance(mappings,dict): fail(f"manifest.{field} must be an object")
     for asset_id,rel in mappings.items():
-        if not isinstance(asset_id,str) or not asset_id or not isinstance(rel,str): fail(f"Invalid manifest mapping in {field}")
-        pattern={"materials":r"^materials/[a-z0-9-]+/v[0-9]+\.(?:png|webp)$","missionMaterials":r"^mission-materials/[a-z0-9-]+/v[0-9]+\.(?:png|webp)$","experiments":r"^experiments/[a-z0-9-]+/[a-z0-9-]+-v[0-9]+\.(?:png|webp)$"}[field]
+        if not isinstance(asset_id,str) or not re.fullmatch(r"[a-zA-Z0-9_.-]{1,128}",asset_id) or not isinstance(rel,str): fail(f"Invalid manifest mapping in {field}")
+        if field=="elements" and asset_id not in symbols: fail(f"Unknown element: {asset_id}")
+        if field=="facilities" and asset_id not in index_facilities: fail(f"Unknown facility: {asset_id}")
+        pattern=rf"{directory}/[-a-z0-9]+/(?:[-a-z0-9]+-)?v[0-9]+\.(?:png|webp)"
         if not re.fullmatch(pattern,rel,re.I): fail(f"Unsafe or invalid asset path: {field}.{asset_id} -> {rel}")
         image=(ROOT/rel).resolve()
-        if ROOT.resolve() not in image.parents or not image.is_file() or image.stat().st_size<100: fail(f"Missing or empty asset: {rel}")
+        if (ROOT/directory).resolve() not in image.parents or not image.is_file() or image.stat().st_size<100: fail(f"Missing or empty asset: {rel}")
+        with image.open("rb") as stream:
+            header=stream.read(12)
+        if image.suffix.lower()==".png" and not header.startswith(bytes.fromhex("89504e470d0a1a0a")): fail(f"Invalid PNG: {rel}")
+        if image.suffix.lower()==".webp" and not (header[:4]==b"RIFF" and header[8:12]==b"WEBP"): fail(f"Invalid WebP: {rel}")
+        try:
+            with Image.open(image) as decoded:
+                if decoded.format != image.suffix[1:].upper(): fail(f"Image format mismatch: {rel}")
+                if not (1 <= decoded.width <= 8192 and 1 <= decoded.height <= 8192): fail(f"Invalid image dimensions: {rel}")
+                decoded.verify()
+            with Image.open(image) as decoded:
+                decoded.load()
+        except Exception as exc:
+            fail(f"Image decode failed: {rel}: {exc}")
         total+=1
 if total == 0: fail("No image mappings found")
 print(f"Validated 118 elements, 30 levels, 3 chapters, {total} image mappings, and runtime override consistency")

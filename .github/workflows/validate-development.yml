@@ -1,7 +1,7 @@
 name: Validate and publish development data
 on:
   push:
-    branches: [development]
+    branches: [development, 'dev/illustration-validation']
     paths:
       - 'manifest.json'
       - 'game-config.json'
@@ -10,6 +10,10 @@ on:
       - 'materials/**'
       - 'mission-materials/**'
       - 'experiments/**'
+      - 'elements/**'
+      - 'characters/**'
+      - 'facilities/**'
+      - 'backgrounds/**'
       - 'scripts/validate-development.py'
       - '.github/workflows/validate-development.yml'
   pull_request:
@@ -22,6 +26,10 @@ on:
       - 'materials/**'
       - 'mission-materials/**'
       - 'experiments/**'
+      - 'elements/**'
+      - 'characters/**'
+      - 'facilities/**'
+      - 'backgrounds/**'
       - 'scripts/validate-development.py'
       - '.github/workflows/validate-development.yml'
   workflow_dispatch:
@@ -39,6 +47,8 @@ jobs:
         with:
           ref: ${{ github.event.pull_request.head.sha || github.sha }}
           fetch-depth: 0
+      - name: Install image decoder
+        run: python3 -m pip install Pillow==12.1.1
       - name: Validate config, progression, and image references
         run: python3 scripts/validate-development.py
       - name: Promote only the validated snapshot
