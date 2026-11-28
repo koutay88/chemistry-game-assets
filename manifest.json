@@ -147,6 +147,8 @@
     "productAnalysisStep01": "experiments/product-analysis/step-01-v001.webp",
     "fusionStep01": "experiments/fusion/step-01-v001.webp",
     "fusionStep02": "experiments/fusion/step-02-v001.webp",
-    "fusionStep03": "experiments/fusion/step-03-v001.webp"
+    "fusionStep03": "experiments/fusion/step-03-v001.webp",
+    "decayStep02": "experiments/decay/step-02-v001.webp",
+    "productAnalysisStep02": "experiments/product-analysis/step-02-v001.webp"
   }
 }
