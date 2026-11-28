@@ -99,6 +99,16 @@
     "potassiumStep01": "experiments/potassium/step-01-v002.webp",
     "potassiumStep02": "experiments/potassium/step-02-v002.webp",
     "tinManganeseStep01": "experiments/tin-manganese/step-01-v001.webp",
-    "tinManganeseStep02": "experiments/tin-manganese/step-02-v002.webp"
+    "tinManganeseStep02": "experiments/tin-manganese/step-02-v002.webp",
+    "zincCadmiumStep01": "experiments/zinc-cadmium/step-01-v001.webp",
+    "zincCadmiumStep02": "experiments/zinc-cadmium/step-02-v001.webp",
+    "mercuryStep01": "experiments/mercury/step-01-v001.webp",
+    "mercuryStep02": "experiments/mercury/step-02-v001.webp",
+    "arsenicStep01": "experiments/arsenic/step-01-v001.webp",
+    "arsenicStep02": "experiments/arsenic/step-02-v001.webp",
+    "seleniumTelluriumStep01": "experiments/selenium-tellurium/step-01-v001.webp",
+    "seleniumTelluriumStep02": "experiments/selenium-tellurium/step-02-v001.webp",
+    "niobiumTantalumStep01": "experiments/niobium-tantalum/step-01-v001.webp",
+    "niobiumTantalumStep02": "experiments/niobium-tantalum/step-02-v001.webp"
   }
 }
