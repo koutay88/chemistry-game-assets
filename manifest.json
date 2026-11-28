@@ -109,6 +109,16 @@
     "seleniumTelluriumStep01": "experiments/selenium-tellurium/step-01-v001.webp",
     "seleniumTelluriumStep02": "experiments/selenium-tellurium/step-02-v001.webp",
     "niobiumTantalumStep01": "experiments/niobium-tantalum/step-01-v001.webp",
-    "niobiumTantalumStep02": "experiments/niobium-tantalum/step-02-v001.webp"
+    "niobiumTantalumStep02": "experiments/niobium-tantalum/step-02-v001.webp",
+    "siliconStep01": "experiments/silicon/step-01-v001.webp",
+    "siliconStep02": "experiments/silicon/step-02-v001.webp",
+    "titaniumZirconiumStep01": "experiments/titanium-zirconium/step-01-v001.webp",
+    "titaniumZirconiumStep02": "experiments/titanium-zirconium/step-02-v001.webp",
+    "berylliumStrontiumBariumStep01": "experiments/beryllium-strontium-barium/step-01-v001.webp",
+    "berylliumStrontiumBariumStep02": "experiments/beryllium-strontium-barium/step-02-v001.webp",
+    "chromiumVanadiumStep01": "experiments/chromium-vanadium/step-01-v001.webp",
+    "chromiumVanadiumStep02": "experiments/chromium-vanadium/step-02-v001.webp",
+    "boronStep01": "experiments/boron/step-01-v001.webp",
+    "boronStep02": "experiments/boron/step-02-v001.webp"
   }
 }
